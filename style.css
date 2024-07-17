@@ -1,0 +1,296 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 43rem;
+}
+
+header {
+  height: 7.2rem;
+  background-color: #065E7C;
+  padding: 1.6rem 2.8rem;
+}
+
+header .container {
+  max-width: 37.4rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.6rem;
+}
+
+header a {
+  line-height: 0;
+}
+
+a .logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.perfil {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+form input {
+  width: 24rem;
+  height: 4rem;
+  background: rgb(255 255 255 / 0.2);
+  border: none;
+  border-radius: 0.4rem;
+  color: #FFFFFF;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 100%;
+  padding: 12px 14px;
+}
+
+form input::placeholder {
+  color: #FFFFFF;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+section img {
+  width: 431px;
+  height: 21.9rem;
+}
+
+.title {
+  margin: 3.1rem 2.2rem;
+}
+
+.title h1 {
+  color: #202024;
+  font-family: "Mulish", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 160%;
+
+
+}
+
+.action {
+  margin-top: 1.6rem;
+}
+
+.action .joia {
+  background-image: url(./assets/ThumbUp.svg);
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+}
+
+.action .njoia {
+  background-image: url(./assets/ThumbDown.svg);
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+}
+
+button {
+  transition: all 300ms;
+}
+
+button:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+
+main p {
+  padding-inline: 2.2rem;
+  /* max-width: 38.2rem; */
+  margin-inline: auto;
+  color: #121214;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+aside {
+  margin-top: 3.4rem;
+  padding-inline: 2.2rem;
+}
+
+aside h1 {
+  font-family: "Mulish", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 160%;
+}
+
+.gatos {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.gatos img {
+  border-radius: 0.5rem;
+  width: 15.1rem;
+}
+
+.detalhes h2 {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 160%;
+}
+
+.detalhes p {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+footer {
+  background-color: #387E96;
+  margin-top: 3.9rem;
+  width: 43rem;
+  height: 6.4rem;
+  text-align: center;
+  padding-block: 2.6rem;
+
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+@media (width > 80rem) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    max-width: initial;
+  }
+
+  .app {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  }
+
+  header {
+    grid-area: header;
+    max-width: initial;
+    margin-inline: initial;
+    margin: initial;
+
+  }
+
+  header .container {
+    max-width: 121.6rem;
+    margin-inline: auto;
+    /* margin: initial; */
+  }
+
+  header form {
+    flex: 1;
+  }
+
+
+  form input {
+    width: 100%;
+  }
+
+  main {
+    grid-area: main;
+    margin-top: 4.4rem;
+    margin-left: 10.9rem;
+    max-width: 80rem;
+  }
+
+  section {
+    max-width: 800px;
+  }
+
+  section img {
+    width: 80.3rem;
+    height: 40.5rem;
+  }
+
+  .title {
+    margin: 3.1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80rem;
+  }
+
+  .action {
+    margin: initial;
+  }
+
+  main p {
+    width: 80rem;
+    margin-inline: initial;
+    padding: initial;
+  }
+
+
+
+  aside {
+    grid-area: aside;
+    width: 38.4rem;
+    height: 61.5rem;
+    padding: initial;
+  }
+
+  footer {
+    grid-area: footer;
+    width: 100%;
+  }
+
+
+}
+
+header {
+  animation: fromTop 600ms 200ms backwards;
+}
+
+main,
+aside {
+  animation: fromBottom 800ms 200ms backwards;
+}
+
+img:hover {
+  scale: 1.1;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
